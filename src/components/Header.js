@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -30,32 +31,17 @@ const Header = () => {
                         id="navbarsExample04">
                         <ul className="navbar-nav me-auto mb-0 mb-md-0">
                             <li className="nav-item">
-                                <a
-                                    className="nav-link active"
+                                <Link
+                                    className="nav-link"
                                     aria-current="page"
-                                    href="index.html">
+                                    to="/">
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a
-                                    className="nav-link border-end border-primary"
-                                    href="./about.html">
+                                <Link className="nav-link" to="/about">
                                     About
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <form className="input-group mb-0">
-                                    <button className="btn">
-                                        <i className="bi bi-search text-light"></i>
-                                    </button>
-                                    <input
-                                        className="form-control search text-light"
-                                        type="text"
-                                        placeholder="Search"
-                                        aria-label="Search"
-                                    />
-                                </form>
+                                </Link>
                             </li>
                         </ul>
                         <form>

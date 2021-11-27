@@ -5,6 +5,10 @@
     --dark-secondary-color: #2c3d2e;
 }
 
+* {
+    transition: all 0.5s ease-out !important;
+}
+
 .bg-my-dark-secondary {
     background-color: var(--dark-secondary-color) !important;
 }
@@ -37,6 +41,13 @@ nav.border-primary {
     width: 18rem !important;
     border-radius: 20px !important;
     border: none !important;
+    transition: transform 2s ease-out !important;
+}
+
+.card:hover {
+    box-shadow: 0px 4px 8px rgba(109, 252, 117, 0.3);
+    transition: transform 2s ease-out !important;
+    top: -4px;
 }
 
 .card img {

@@ -6,7 +6,7 @@ const Carousel = () => {
         <div className="py-5 bg-custom">
             <div className="container px-4 px-lg-5 mt-5">
                 <div className="text-center text-white">
-                    <img src={logo} class="img-fluid logo-img" alt="..." />
+                    <img src={logo} className="img-fluid logo-img" alt="..." />
                 </div>
             </div>
         </div>
