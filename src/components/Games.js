@@ -7,16 +7,16 @@ const Games = () => {
     const [text, setText] = useState("");
 
     useEffect(() => {
-        fetch("https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/games")
+        fetch("https://api.allorigins.win/get?url=https://www.freetogame.com/api/games")
             .then((response) => response.json())
             .then((data) => {
-                setGames(data);
-                setOriGames(data);
-                // console.log(games)
+                setGames(JSON.parse(data.contents));
+                setOriGames(JSON.parse(data.contents));
             });
 
         // eslint-disable-next-line
     }, []);
+                // console.log(games)
 
     const gamesJsx = games.map((game) => (
         <GamesItem key={game.id} game={game} />

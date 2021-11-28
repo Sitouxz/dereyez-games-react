@@ -11,10 +11,10 @@ const Details = () => {
 
     useEffect(() => {
         console.log("Fetching API")
-        fetch(`https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/game?id=${gameId}`)
+        fetch(`https://api.allorigins.win/get?url=https://www.freetogame.com/api/game?id=${gameId}`)
             .then((response) => response.json())
             .then((data) => {
-                setGame(data);
+                setGame(JSON.parse(data.contents));
                 // console.log(gameId);
                 // console.log(game);
                 setLoading(false);

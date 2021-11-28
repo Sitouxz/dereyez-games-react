@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const GameDetails = (props) => {
-    console.log(props);
+    // console.log(props);
     return (
         <div className="container text-light fw-lighter">
             <Link className="text-decoration-none text-light" to="/">Back</Link>
