@@ -5,24 +5,29 @@ import Footer from "../components/Footer";
 import GameDetails from "../components/GameDetails";
 
 const Details = () => {
-    const [game, setGame] = useState({});
+    const [game, setGame] = useState([]);
     const { gameId } = useParams();
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        console.log("Fetching API")
         fetch(`https://www.freetogame.com/api/game?id=${gameId}`)
             .then((response) => response.json())
             .then((data) => {
-                console.log(game);
                 setGame(data);
+                console.log(gameId);
+                console.log(game);
+                setLoading(false);
             });
 
         // eslint-disable-next-line
     }, []);
     console.log(game);
+    console.log(gameId);
     return (
         <>
             <Header />
-            <GameDetails game={game} />
+            {loading ? "loading..." : <GameDetails key={gameId} game={game} />}
             <Footer />
         </>
     );

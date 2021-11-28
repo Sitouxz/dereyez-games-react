@@ -5,15 +5,16 @@ const GameDetails = (props) => {
     console.log(props);
     return (
         <div className="container text-light fw-lighter">
-            <Link to="/"></Link>
-            <h1>Game Title</h1>
+            <Link className="text-decoration-none text-light" to="/">Back</Link>
+            <h1>{props.game.title}
+            </h1>
             <div className="row">
                 <div className="col-lg-8 col-sm-12">
                     <div className="mb-3">
                         <img
                             src={props.game.screenshots[0].image}
                             className="img-fluid w-100"
-                            alt=""
+                            alt={props.game.screenshots[1].image}
                         />
                     </div>
                     <div className="fs-4">
@@ -31,37 +32,25 @@ const GameDetails = (props) => {
                                     <span className="me-3 fw-600 fs-3">
                                         processor:
                                     </span>
-                                    {
-                                        props.game.minimum_system_requirements
-                                            .processor
-                                    }
+                                    {props.game.minimum_system_requirements.processor}
                                 </li>
                                 <li>
                                     <span className="me-3 fw-600 fs-3">
                                         memory:
                                     </span>
-                                    {
-                                        props.game.minimum_system_requirements
-                                            .memory
-                                    }
+                                    {props.game.minimum_system_requirements.memory}
                                 </li>
                                 <li>
                                     <span className="me-3 fw-600 fs-3">
                                         graphics:
                                     </span>
-                                    {
-                                        props.game.minimum_system_requirements
-                                            .graphics
-                                    }
+                                    {props.game.minimum_system_requirements.graphics}
                                 </li>
                                 <li>
                                     <span className="me-3 fw-600 fs-3">
                                         storage:
                                     </span>
-                                    {
-                                        props.game.minimum_system_requirements
-                                            .storage
-                                    }
+                                    {props.game.minimum_system_requirements.storage}
                                 </li>
                             </ul>
                         </p>

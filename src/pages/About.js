@@ -6,10 +6,15 @@ const About = () => {
     return (
         <>
             <Header />
-            <div className="container">
-                <h3 className="text-light">
-                    Made by Ombuh, Yehezkiel Owen with ❤️
+            <div className="container text-light">
+                <h1>Dereyez Games</h1>
+                <h3>
+                    Simple game list website made with ReactJS
                 </h3>
+                <br/>
+                <p>Nama: Ombuh, Yehezkiel Owen</p>
+                <p>NIM: 105022010018</p>
+                <p>Prodi: Teknik Informatika</p>
             </div>
             <Footer />
         </>

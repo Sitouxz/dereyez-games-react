@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import logo from '../assets/dereyez-games-small.png'
+
 const Header = () => {
     return (
         <header className="m-3 bg-my-primary px-md-5 mx-lg-5">
@@ -12,9 +14,9 @@ const Header = () => {
                 "
                 aria-label="Fourth navbar example">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="./index.html">
-                        <img src="./dereyez-games-small.png" alt="" />
-                    </a>
+                    <Link className="navbar-brand" to="/">
+                        <img src={logo} alt="" />
+                    </Link>
                     <button
                         className="navbar-toggler"
                         type="button"
