@@ -7,11 +7,12 @@ const Games = () => {
     const [text, setText] = useState("");
 
     useEffect(() => {
-        fetch("https://www.freetogame.com/api/games")
+        fetch("https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/games")
             .then((response) => response.json())
             .then((data) => {
                 setGames(data);
                 setOriGames(data);
+                // console.log(games)
             });
 
         // eslint-disable-next-line
@@ -43,7 +44,7 @@ const Games = () => {
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
-                        className="form-control search border text-light"
+                        className="form-control search border-bottom text-light"
                         placeholder="Search game here..."
                         onChange={handleChange}
                         value={text}

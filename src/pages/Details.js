@@ -11,19 +11,19 @@ const Details = () => {
 
     useEffect(() => {
         console.log("Fetching API")
-        fetch(`https://www.freetogame.com/api/game?id=${gameId}`)
+        fetch(`https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/game?id=${gameId}`)
             .then((response) => response.json())
             .then((data) => {
                 setGame(data);
-                console.log(gameId);
-                console.log(game);
+                // console.log(gameId);
+                // console.log(game);
                 setLoading(false);
             });
 
         // eslint-disable-next-line
     }, []);
-    console.log(game);
-    console.log(gameId);
+    // console.log(game);
+    // console.log(gameId);
     return (
         <>
             <Header />
