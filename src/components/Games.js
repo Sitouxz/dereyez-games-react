@@ -44,7 +44,7 @@ const Games = () => {
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
-                        className="form-control search border-bottom text-light"
+                        className="form-control search border-bottom border-secondary text-light"
                         placeholder="Search game here..."
                         onChange={handleChange}
                         value={text}
